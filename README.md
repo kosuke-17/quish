@@ -2,6 +2,23 @@
 
 #### Atomic Desgin とサイト記事を参考にしながら src ディレクトリの構成を考えました。
 
+```
+src
+|-common
+|-components
+| |-atoms
+| |-molecules
+| |-organisms
+|
+|-pages
+| |-api
+| |-「page 名」.tsx
+|
+|-templates
+|-hooks
+|-styles
+```
+
 [参考記事](https://maku.blog/p/4is2ahp/)
 
 ---
