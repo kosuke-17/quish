@@ -7,7 +7,7 @@ const { Header, Footer } = Layout;
 // レイアウト全体のスタイル
 const LayoutComp: React.FC = ({ children }) => {
   return (
-    <Layout className="h-screen">
+    <Layout>
       <Header className="bg-blue-500 w-full h-16 relative">
         <HeaderComp />
       </Header>
