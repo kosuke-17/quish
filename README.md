@@ -4,19 +4,19 @@
 
 ```
 src
-|-common
 |-components
 | |-atoms
 | |-molecules
 | |-organisms
 |
+|-const
+|-hooks
 |-pages
 | |-api
 | |-「page 名」.tsx
 |
-|-templates
-|-hooks
 |-styles
+|-templates
 ```
 
 [参考記事](https://maku.blog/p/4is2ahp/)
@@ -60,8 +60,8 @@ src
 
 **共通データ用ディレクトリ**
 
-- common/  
-  役割 :「型定義や共通定数を保有するディレクトリ」
+- const/  
+  役割 :「型定義や定数を保有するディレクトリ」
 
 ---
 
