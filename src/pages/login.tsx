@@ -1,10 +1,10 @@
 import React from "react";
-import { LoginForm } from "../containers/templates";
+import { LoginForm } from "../templates";
 
 const Login: React.FC = () => {
   return (
     <div>
-      <LoginForm />
+      <LoginForm label="ログイン" />
     </div>
   );
 };
