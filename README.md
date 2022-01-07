@@ -14,6 +14,7 @@
 
 **ロジックを定義するディレクトリ(Container Components)**
 役割 :「ロジックを持たせ、components ディレクトリに props を渡すコンポーネント」
+(もし tailwind を適用させるなら、tailwind.config に dir 名を追加)
 
 - containers/
 
