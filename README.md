@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## フロント src ディレクトリの構成(優先度 → 上：高,下:低)
 
-## Getting Started
+#### Atomic Desgin とサイト記事を参考にしながら src ディレクトリの構成を考えました。
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```
+src
+|-components
+| |-atoms
+| |-molecules
+| |-organisms
+|
+|-const
+|-hooks
+|-pages
+| |-api
+| |-「page 名」.tsx
+|
+|-styles
+|-templates
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[参考記事](https://maku.blog/p/4is2ahp/)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+**見た目を定義するディレクトリ(Presentational Components)**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- components/  
+  役割 :「ロジックを持たず、渡された props を描画するコンポーネント」
 
-## Learn More
+  - atoms/
+  - molecules/
+  - organisms/
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**ページディレクトリ(Container Components)**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- pages/  
+  役割 :「URL パスに応じた tsx ファイルの表示,templates/にデータを流す」
 
-## Deploy on Vercel
+  - api/ ← データフェッチ関数使用のため
+  - 「page 名」.tsx
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**テンプレートディレクトリ(Container Components)**
+
+- templates/  
+  役割 :「pages/から受け取ったデータをもとに処理を行う。components/に props を渡す」
+
+---
+
+**カスタム処理用ディレクトリ**
+
+- hooks/  
+  役割 :「カスタムフックスや共通処理の保有」
+
+---
+
+**定数用ディレクトリ**
+
+- const/  
+  役割 :「型定義や定数を保有するディレクトリ」
+
+---
+
+**CSS の記述**
+
+- styles/  
+  役割 :「CSS のコードを記述」
+
+---
