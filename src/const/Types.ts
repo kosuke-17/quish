@@ -5,5 +5,5 @@ export type InputStrType = {
 // onChange として定義したメソッドの型
 export type onChangeProps = {
   onChange: Function;
-  label?: string;
+  placeholder?: string;
 };
