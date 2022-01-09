@@ -1,6 +1,6 @@
 import React from "react";
-import { NAVITEM_DATA } from "../../const/NAVITEM_DATA";
-import NavItem from "../atoms/NavItem";
+import { NAVITEM_DATA } from "../../const/NavItem_Data";
+import { NavItem } from "../atoms";
 
 const NavItems: React.FC = () => {
   return (

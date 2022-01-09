@@ -2,7 +2,7 @@ import { Input } from "antd";
 import React from "react";
 import { onChangeProps } from "../../../const/Types";
 
-const EmailAddressInput: React.FC<onChangeProps> = ({ onChange, label }) => {
+const UserFormInput: React.FC<onChangeProps> = ({ onChange, label }) => {
   return (
     <Input
       onChange={(e) => onChange(e)}
@@ -12,4 +12,4 @@ const EmailAddressInput: React.FC<onChangeProps> = ({ onChange, label }) => {
   );
 };
 
-export default EmailAddressInput;
+export default UserFormInput;

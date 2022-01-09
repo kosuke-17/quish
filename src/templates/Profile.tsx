@@ -1,6 +1,6 @@
 import React from "react";
 
-const Profile = () => {
+const Profile: React.FC = () => {
   return (
     <div className="box-content h-96 m-2 bg-white rounded-lg border shadow-md">
       <div className="m-4">
