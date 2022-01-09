@@ -1,46 +1,46 @@
 import React from "react";
-import { UserFormInput } from "../atoms";
+import { Button } from "antd";
+import UserFormInputs from "../molecules/UserFormInputs";
 
 type Props = {
-  loginText: string;
+  loginTitleText: string;
+  mailAdressText: string;
+  passwordText: string;
   onChangeMailAddress: Function;
   onChangePassword: Function;
-  onClicklogin: Function;
+  onClick: Function;
   errorMessage: string;
 };
 
 const LoginComp: React.FC<Props> = ({
-  loginText,
+  loginTitleText,
+  mailAdressText,
+  passwordText,
   errorMessage,
   onChangeMailAddress,
   onChangePassword,
-  onClicklogin,
+  onClick,
 }) => {
-  const LOGIN_INPUT_DATA = ["メールアドレス", "パスワード"];
+  const INPUT_ITEMS_DATA = [
+    { name: mailAdressText, onChange: onChangeMailAddress },
+    { name: passwordText, onChange: onChangePassword },
+  ];
   return (
     <React.Fragment>
       <div className="font-bold text-3xl m-10 -ml-4 text-blue-500">
-        {loginText}
+        {loginTitleText}
       </div>
       <div className="text-red-500 h-10">{errorMessage}</div>
-      <div className="font-bold">メールアドレス</div>
       <div>
-        <UserFormInput
-          onChange={onChangeMailAddress}
-          placeholder="メールアドレス"
-        />
+        <UserFormInputs INPUT_ITEMS_DATA={INPUT_ITEMS_DATA} />
       </div>
-      <div className="font-bold">パスワード</div>
-      <div>
-        <UserFormInput onChange={onChangePassword} placeholder="パスワード" />
-      </div>
-      <button
-        type="button"
-        onClick={() => onClicklogin()}
+      <Button
+        type="primary"
+        onClick={() => onClick()}
         className="bg-blue-500 rounded-lg p-2 w-48 mx-28 mt-6 text-white font-normal px-10 border-2 border-white hover:border-blue-500 hover:bg-gray-100 hover:text-blue-500"
       >
-        {loginText}
-      </button>
+        {loginTitleText}
+      </Button>
     </React.Fragment>
   );
 };

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import axios from "axios";
-import { UserFormInput } from "../components/atoms";
 import { InputStrType } from "../const/Types";
 import LoginComp from "../components/organisms/LoginComp";
 
@@ -40,10 +38,12 @@ const LoginUser: React.FC = () => {
       </div>
       <div className="w-2/5 my-20 mx-20">
         <LoginComp
-          loginText="ログイン"
+          loginTitleText="ログイン"
+          mailAdressText="メールアドレス"
+          passwordText="パスワード"
           onChangeMailAddress={changeMailAddress}
           onChangePassword={changePassword}
-          onClicklogin={loginUser}
+          onClick={loginUser}
           errorMessage={errorMessage}
         />
       </div>
