@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { InputStrType } from "../const/Types";
-import LoginComp from "../components/organisms/LoginComp";
+import LoginUserComp from "../components/organisms/LoginUserComp";
 
 const LoginUser: React.FC = () => {
   // ログインデータ
@@ -37,7 +37,7 @@ const LoginUser: React.FC = () => {
         </div>
       </div>
       <div className="w-2/5 my-20 mx-20">
-        <LoginComp
+        <LoginUserComp
           loginTitleText="ログイン"
           mailAdressText="メールアドレス"
           passwordText="パスワード"

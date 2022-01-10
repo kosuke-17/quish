@@ -12,7 +12,7 @@ type Props = {
   errorMessage: string;
 };
 
-const LoginComp: React.FC<Props> = ({
+const LoginUserComp: React.FC<Props> = ({
   loginTitleText,
   mailAdressText,
   passwordText,
@@ -45,4 +45,4 @@ const LoginComp: React.FC<Props> = ({
   );
 };
 
-export default LoginComp;
+export default LoginUserComp;
