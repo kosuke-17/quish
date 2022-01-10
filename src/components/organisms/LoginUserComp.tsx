@@ -22,8 +22,8 @@ const LoginUserComp: React.FC<Props> = ({
   onClick,
 }) => {
   const INPUT_ITEMS_DATA = [
-    { name: mailAdressText, onChange: onChangeMailAddress },
-    { name: passwordText, onChange: onChangePassword },
+    { name: mailAdressText, onChange: onChangeMailAddress, errorMsg: "" },
+    { name: passwordText, onChange: onChangePassword, errorMsg: "" },
   ];
   return (
     <React.Fragment>
