@@ -3,6 +3,7 @@ import Image from "next/image";
 import Router from "next/router";
 import { useState } from "react";
 import { UserFormInput } from "../components/atoms";
+import RegisterUserComp from "../components/organisms/RegisterUserComp";
 import { InputStrType } from "../const/Types";
 
 const RegisterUser: React.FC = () => {
@@ -107,38 +108,21 @@ const RegisterUser: React.FC = () => {
         </div>
       </div>
       <div className="w-2/5 my-20 -ml-40">
-        <div className="font-bold text-3xl m-4 -ml-4 text-blue-500">
-          会員登録
-        </div>
-        <div className="font-bold">ユーザーネーム</div>
-        <div>
-          <UserFormInput onChange={changeUserName} label="ユーザーネーム" />
-        </div>
-        <div className="font-bold">メールアドレス</div>
-        <span className="text-red-600">{errorOfMailAddress}</span>
-        <div>
-          <UserFormInput onChange={changeMailAddress} label="メールアドレス" />
-        </div>
-        <div className="font-bold">パスワード</div>
-        <span className="text-red-600">{errorOfPassword}</span>
-        <div>
-          <UserFormInput onChange={changePassword} label="パスワード" />
-        </div>
-        <div className="font-bold">確認用パスワード</div>
-        <span className="text-red-600">{errorOfCheckpassword}</span>
-        <div>
-          <UserFormInput
-            onChange={changeCheckPassword}
-            label="確認用パスワード"
-          />
-        </div>
-        <button
-          type="button"
+        <RegisterUserComp
+          registerTitleText="会員登録"
+          userNameText="ユーザーネーム"
+          mailAdressText="メールアドレス"
+          passwordText="パスワード"
+          checkPasswordText="確認用パスワード"
+          onChangeUserName={changeUserName}
+          onChangeMailAddress={changeMailAddress}
+          onChangePassword={changePassword}
+          onChangeCheckPassword={changeCheckPassword}
           onClick={registerUser}
-          className="bg-blue-500 rounded-lg p-2 w-40 mx-32 mt-6 text-white font-normal px-10 border-2 border-white hover:border-blue-500 hover:bg-gray-100 hover:text-blue-500"
-        >
-          会員登録
-        </button>
+          errorOfMailAddress={errorOfMailAddress}
+          errorOfPassword={errorOfPassword}
+          errorOfCheckpassword={errorOfCheckpassword}
+        />
       </div>
     </div>
   );

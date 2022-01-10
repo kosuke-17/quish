@@ -12,7 +12,7 @@ type Props = {
   errorMessage: string;
 };
 
-const LoginComp: React.FC<Props> = ({
+const LoginUserComp: React.FC<Props> = ({
   loginTitleText,
   mailAdressText,
   passwordText,
@@ -22,8 +22,8 @@ const LoginComp: React.FC<Props> = ({
   onClick,
 }) => {
   const INPUT_ITEMS_DATA = [
-    { name: mailAdressText, onChange: onChangeMailAddress },
-    { name: passwordText, onChange: onChangePassword },
+    { name: mailAdressText, onChange: onChangeMailAddress, errorMsg: "" },
+    { name: passwordText, onChange: onChangePassword, errorMsg: "" },
   ];
   return (
     <React.Fragment>
@@ -45,4 +45,4 @@ const LoginComp: React.FC<Props> = ({
   );
 };
 
-export default LoginComp;
+export default LoginUserComp;

@@ -1,44 +1,38 @@
 import React from "react";
+import ProfileComp from "../components/organisms/ProfileComp";
 
 const Profile: React.FC = () => {
   return (
-    <div className="box-content h-96 m-2 bg-white rounded-lg border shadow-md">
-      <div className="m-4">
-        <div className="block ml-28 mr-28">@rakus1111111</div>
-        <div className="m-4 flex jusify-around divide-x divide-black">
-          <div className="flex-grow text-center">
-            投稿数
-            <div>11</div>
-          </div>
-          <div className="flex-grow text-center">
-            フォロー
-            <div>122</div>
-          </div>
-          <div className="flex-grow text-center">
-            フォロワー
-            <div>140</div>
-          </div>
-        </div>
-        <div className="block">
-          <div className="m-1">
-            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
-              フロントエンド
-            </span>
-            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
-              TypeScript
-            </span>
-            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
-              Vue
-            </span>
-            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
-              TailwindCSS
-            </span>
-          </div>
-        </div>
-        <div className="block m-2">趣味はサウナです。</div>
-      </div>
+    <div>
+      <ProfileComp user_info_data={user_info_data} />
     </div>
   );
 };
 
 export default Profile;
+
+// APIでデータが取ってこれれば不要
+// ------------------------------------------
+// デモユーザー
+const user_data = {
+  user_name: "rakus111111",
+  password: "Yamtataro123",
+};
+
+const skill_tags = [
+  { user_info_id: 1, skill_id: 1, skill_name: "フロントエンド" },
+  { user_info_id: 1, skill_id: 5, skill_name: "TypeScript" },
+  { user_info_id: 1, skill_id: 6, skill_name: "Vue" },
+  { user_info_id: 1, skill_id: 3, skill_name: "TailwindCSS" },
+];
+
+export const user_info_data = {
+  user_info_id: 1,
+  first_name: "太郎",
+  last_name: "山田",
+  user_name: user_data.user_name,
+  email: "yama@taro.com",
+  engineer_type: "",
+  comment: "趣味はサウナです。",
+  skill_tags: skill_tags,
+};
