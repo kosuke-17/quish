@@ -1,8 +1,9 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import NavItems from "../molecules/NavItems";
 
 const HeaderComp: React.FC = () => {
+  const [isLogin, setIsLogin] = useState(false);
   return (
     <React.Fragment>
       <Link href="/">
@@ -21,7 +22,7 @@ const HeaderComp: React.FC = () => {
 
       <span className="absolute flex top-5 right-12">
         {/* ヘッダーのナビゲーション */}
-        <NavItems />
+        <NavItems isLogin={isLogin} />
       </span>
     </React.Fragment>
   );
