@@ -17,6 +17,7 @@ type Props = {
       comment: string;
     };
     title: string;
+    content: string;
     posted_date: string;
     tags: {
       article_id: number;

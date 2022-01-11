@@ -31,6 +31,8 @@ export const articles_demoData = [
     // user_info_id: 1,
     user_info_data: user_info_data,
     title: "TailwindCSSのチートシートを公開します。",
+    content:
+      "プログラミングをしていると、「あれ、どうだったかな？」とリファレンスを確認する場面が結構出てきます。そんな時に、サクッと確認できるのが「チートシート」です。",
     posted_date: "12月7日",
     tags: [
       { article_id: 1, skill_id: 1, skill_name: "フロントエンド" },
@@ -43,7 +45,9 @@ export const articles_demoData = [
     id: 2,
     // user_info_id: 1,
     user_info_data: user_info_data,
-    title: "Githubコマンドのチートシートを公開します。",
+    title: "Gitコマンドのチートシートを公開します。",
+    content:
+      "Gitの準備 git init, 共有するファイルを選択 git add, ファイル名 選択したファイルを記録 git commit -m メッセージ,リモートリポジトリの準備 git remote add リモートリポジトリ名 URL, リモートリポジトリにファイルをアップロード git push origin master, リモートリポジトリのファイルをダウンロード git pull origin master, 変更したファイルを把握 git status,変更内容を把握 git diff,addしたファイルを確認 git status",
     posted_date: "1月26日",
     tags: [
       { article_id: 2, skill_id: 1, skill_name: "フロントエンド" },
