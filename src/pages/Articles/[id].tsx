@@ -4,8 +4,8 @@ import { TagsOutlined } from "@ant-design/icons";
 
 const Article: React.FC = () => {
   return (
-    <div className="flex justify-center bg-slate-200 h-screen">
-      <div className="m-10 bg-gray-100 w-1/2 h-auto ">
+    <div className="flex justify-center bg-gray-200 h-screen">
+      <div className="m-10 bg-white w-1/2 h-auto ">
         <div className="ml-5 mt-5 text-sm">
           @ユーザーネーム
           <div className="flex text-slate-500">
