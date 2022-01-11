@@ -17,6 +17,14 @@ const RegisterUser: React.FC = () => {
   const [errorOfPassword, setErrorOfPassword] = useState("");
   const [errorOfCheckpassword, setErrorOfCheckpassword] = useState("");
 
+  const textLabel = {
+    registerTitle: "会員登録",
+    userName: "ユーザーネーム",
+    mailAddress: "メールアドレス",
+    password: "パスワード",
+    checkPassword: "確認用パスワード",
+  };
+
   const hasErrors = (): boolean => {
     // エラー変数
     let hasError = false;
@@ -109,11 +117,7 @@ const RegisterUser: React.FC = () => {
       </div>
       <div className="w-2/5 my-20 -ml-40">
         <RegisterUserComp
-          registerTitleText="会員登録"
-          userNameText="ユーザーネーム"
-          mailAdressText="メールアドレス"
-          passwordText="パスワード"
-          checkPasswordText="確認用パスワード"
+          textLabel={textLabel}
           onChangeUserName={changeUserName}
           onChangeMailAddress={changeMailAddress}
           onChangePassword={changePassword}
