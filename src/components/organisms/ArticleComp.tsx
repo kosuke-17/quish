@@ -35,7 +35,7 @@ const ArticleComp: React.FC<Props> = ({ articleData }) => {
           @{articleData.user_info_data.user_name}が{articleData.posted_date}
           に投稿しました
         </div>
-        <Link href="/#">
+        <Link href={`/Articles/${articleData.id}`}>
           <a className="font-bold text-xl no-underline hover:underline">
             {articleData.title}
           </a>
