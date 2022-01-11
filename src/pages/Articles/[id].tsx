@@ -14,7 +14,7 @@ const Article: React.FC = () => {
             <div>更新日: 2021年12月7日</div>
           </div>
         </div>
-        <p className="m-4  text-2xl font-bold bg-slate-400">
+        <p className="m-4  text-2xl font-bold">
           TailwindCSSのチートシートを公開します。
         </p>
         <p className="px-10 pb-4">
