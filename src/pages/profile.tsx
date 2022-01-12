@@ -13,7 +13,7 @@ const profile: React.FC = () => {
       <div className="flex justify-center">
         <div className="w-1/3">
           <RectangleProfile user_info_data={user_info_data} />
-          {/* <div className="mt-10">
+          <div className="mt-10">
             <span className="block p-2 rounded-xl">
               <Input
                 className="text-3xl hover:placeholder-gray-600"
@@ -29,7 +29,7 @@ const profile: React.FC = () => {
               />
             </span>
           </div>
-          <div className="block mt-10">
+          {/* <div className="block mt-10">
             <Timeline mode="right">
               <div className="flex">
                 <Item
