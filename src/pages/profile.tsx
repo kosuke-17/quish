@@ -29,7 +29,7 @@ const profile: React.FC = () => {
               />
             </span>
           </div>
-          {/* <div className="block mt-10">
+          <div className="block mt-10">
             <Timeline mode="right">
               <div className="flex">
                 <Item
@@ -92,7 +92,7 @@ const profile: React.FC = () => {
                 </div>
               </div>
             </Timeline>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
