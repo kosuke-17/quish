@@ -1,6 +1,6 @@
 import React from "react";
 import { RectangleProfile } from "../components/organisms";
-import { TrademarkCircleTwoTone, LoadingOutlined } from "@ant-design/icons";
+import { TrademarkCircleTwoTone } from "@ant-design/icons";
 import { Input, Timeline } from "antd";
 const { TextArea } = Input;
 const { Item } = Timeline;
