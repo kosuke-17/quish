@@ -35,7 +35,7 @@ const formcomponents = () => {
     <div className="h-screen">
       <div className="flex-none">フォームコンポーネント(削除用)</div>
       <div className="flex justify-center items-center h-screen">
-        <div className="flex justify-center items-center bg-white pt-8 h-2/3 w-96 rounded-lg border shadow-md ">
+        <div className="flex justify-center bg-white pt-8 h-auto w-96 rounded-lg border shadow-md ">
           <Form className="w-5/6">
             <Form.Item
               name="orgname"
