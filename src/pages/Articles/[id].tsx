@@ -3,6 +3,7 @@ import React from "react";
 import { TagsOutlined, HeartTwoTone, PictureFilled } from "@ant-design/icons";
 import { ProfileComp } from "../../components/organisms";
 import TextArea from "antd/lib/input/TextArea";
+import Image from "next/image";
 
 const Article: React.FC = () => {
   const commentContent =
@@ -10,25 +11,43 @@ const Article: React.FC = () => {
   return (
     <div className="bg-gray-200 h-screen">
       <div className="flex justify-center">
-        <div className="m-10 bg-white w-1/2 h-auto rounded-lg border shadow-md">
-          <div className="ml-5 mt-5 text-sm">
-            @ユーザーネーム
-            <div className="flex text-slate-500">
-              <div>投稿日: 2021年12月7日</div>
-              &nbsp;
-              <div>更新日: 2021年12月7日</div>
-            </div>
+        <div className="text-center m-10 bg-white w-1/2 h-auto rounded-lg border shadow-md">
+          <div className="mt-8">
+            <Image
+              src={"/img/lang_logos/react.png"}
+              width={80}
+              height={80}
+              alt="言語画像"
+            />
           </div>
-          <p className="m-4  text-2xl font-bold">
+          <div className="py-2 text-2xl font-bold">
             TailwindCSSのチートシートを公開します。
-          </p>
-          <p className="px-10 pb-4">
+          </div>
+          <div className="px-10">
             <TagsOutlined className="text-2xl" />
-            &nbsp; フロントエンド、CSS、tailwindCSS、初心者
-          </p>
+            &nbsp;{" "}
+            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
+              {" "}
+              フロントエンド
+            </span>
+            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
+              CSS
+            </span>
+            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
+              tailwindCSS
+            </span>
+            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
+              初心者
+            </span>
+          </div>
+          <div className="text-slate-500 text-center">
+            <span>投稿日: 2021年12月7日</span>
+            &nbsp;
+            <span>更新日: 2021年12月7日</span>
+          </div>
 
-          <div className="flex justify-center items-center bg-gray-400 box-content ml-8 h-40 w-5/6 p-8 text-center">
-            NoImage
+          <div className="bg-gray-400 box-content h-40  p-8 text-center">
+            NoImage?
           </div>
           <p className="p-10 text-lg">
             {commentContent}{" "}
