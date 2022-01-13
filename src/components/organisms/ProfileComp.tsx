@@ -9,7 +9,7 @@ type Props = {
     last_name: string;
     user_name: string;
     email: string;
-    engineer_type: string;
+    enginner_type: string;
     comment: string;
     skill_tags: {
       user_info_id: number;
@@ -21,10 +21,12 @@ type Props = {
 
 const ProfileComp: React.FC<Props> = ({ user_info_data }) => {
   return (
-    <div className="box-content h-96 m-2 bg-white rounded-lg border shadow-md">
+    <div className="w-full p-2 m-2 bg-white rounded-lg border shadow-md">
       <div className="m-4">
-        {/* ブロックプロパティの意味は? */}
-        <div className="block ml-28 mr-28">@{user_info_data.user_name}</div>
+        <div className="flex justify-center items-center">
+          <div className="w-20 h-20 rounded-full bg-slate-300"></div>
+          <div className="pl-3">@{user_info_data.user_name}</div>
+        </div>
         <div className="m-4 flex jusify-around divide-x divide-black ">
           <div className="flex-grow text-center">
             投稿数
@@ -39,8 +41,11 @@ const ProfileComp: React.FC<Props> = ({ user_info_data }) => {
             <div>140</div>
           </div>
         </div>
-        <div className="block">
-          <SkillTagsOnProfile tags={user_info_data.skill_tags} />
+        <div className="text-xl mt-2 flex justify-center items-center">
+          職種:
+          <span className="ml-4 px-3 rounded-md text-white bg-orange-400">
+            FR
+          </span>
         </div>
       </div>
       <div className="block m-2">{user_info_data.comment}</div>

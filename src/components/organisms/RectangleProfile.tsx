@@ -24,10 +24,7 @@ const RectangleProfile: React.FC<Props> = ({ user_info_data }) => {
     <div className="flex w-full m-2 p-2 bg-white rounded-lg border shadow-md">
       <div className="w-1/2 flex items-center">
         <div className="w-20 h-20 rounded-full bg-slate-300"></div>
-        <div className="pl-3">
-          @{user_info_data.user_name}
-          <div className="text-gray-400">&nbsp;ラクス太郎</div>
-        </div>
+        <div className="pl-3">@{user_info_data.user_name}</div>
       </div>
       <div className="w-1/2">
         <div className="mt-2 flex items-center justify-center">
