@@ -11,7 +11,7 @@ const profile: React.FC = () => {
           <div className="flex justify-between">
             <div></div>
             <Link href={"/profileEdit"}>
-              <a className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] drop-shadow-2xl">
+              <a className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] hover:text-white drop-shadow-2xl">
                 編集
               </a>
             </Link>
