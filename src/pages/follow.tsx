@@ -3,12 +3,15 @@ import { RectangleProfile } from "../components/organisms";
 
 const Follow: React.FC = () => {
   return (
-    <div className="h-screen flex justify-center items-center bg-gray-200">
-      <div className="w-1/3">
-        <RectangleProfile user_info_data={user_info_data} />
-        <RectangleProfile user_info_data={user_info_data} />
-        <RectangleProfile user_info_data={user_info_data} />
-        <RectangleProfile user_info_data={user_info_data} />
+    <div className="p-3 h-screen bg-gray-200 text-center">
+      <div className="text-3xl font-bold">フォローリスト一覧</div>
+      <div className=" flex justify-center items-center ">
+        <div className="w-1/3">
+          <RectangleProfile user_info_data={user_info_data} />
+          <RectangleProfile user_info_data={user_info_data} />
+          <RectangleProfile user_info_data={user_info_data} />
+          <RectangleProfile user_info_data={user_info_data} />
+        </div>
       </div>
     </div>
   );
