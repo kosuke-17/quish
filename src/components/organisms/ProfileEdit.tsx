@@ -41,8 +41,9 @@ const ProfileEdit: React.FC<Props> = ({ user_info_data }) => {
   const engineer_types = ["FR", "WEB", "ML", "CL", "QA"];
 
   return (
-    <div className="w-full p-10 m-2 bg-white rounded-lg border shadow-md">
+    <div className="w-full p-8 m-2 bg-white rounded-lg border shadow-md">
       <div className="m-4">
+        {/* FormタグとButtonタグが必要かも、 */}
         <div className="flex justify-center items-center">
           {/* image(User) */}
           <Image
@@ -52,44 +53,40 @@ const ProfileEdit: React.FC<Props> = ({ user_info_data }) => {
             width={120}
             height={120}
           />
-          {/* userName(User) */}
-          <Form.Item
-            name="userName"
-            rules={[{ required: true, message: "名前が空欄です" }]}
-          >
-            <span className="p-2">
+          <div className="pt-7">
+            {/* userName(User) */}
+            <Form.Item
+              name="userName"
+              rules={[{ required: true, message: "名前が空欄です" }]}
+            >
               <Input
                 className="focus:placeholder-gray-400"
                 placeholder="名前を入力"
                 bordered={false}
                 size={"large"}
-                value={user_info_data.user_name}
               />
-            </span>
-          </Form.Item>
-        </div>
-        <div className="mt-6 flex justify-center">
-          {/* engineerType(User) */}
-          <Form.Item
-            name="engineerType"
-            rules={[{ required: true, message: "職種が空欄です" }]}
-            className="w-1/5"
-          >
-            <Select
-              size={"large"}
-              placeholder="職種"
-              className="w-20"
-              bordered={false}
+            </Form.Item>
+            {/* engineerType(User) */}
+            <Form.Item
+              name="engineerType"
+              rules={[{ required: true, message: "職種が空欄です" }]}
             >
-              {engineer_types.map((engineer) => {
-                return (
-                  <Option key={engineer} value={engineer}>
-                    {engineer}
-                  </Option>
-                );
-              })}
-            </Select>
-          </Form.Item>
+              <Select
+                size={"large"}
+                placeholder="職種"
+                className="w-20"
+                bordered={false}
+              >
+                {engineer_types.map((engineer) => {
+                  return (
+                    <Option key={engineer} value={engineer}>
+                      {engineer}
+                    </Option>
+                  );
+                })}
+              </Select>
+            </Form.Item>
+          </div>
         </div>
         <div>
           {/* tags(User) */}
@@ -102,7 +99,7 @@ const ProfileEdit: React.FC<Props> = ({ user_info_data }) => {
               allowClear
               placeholder="使用技術"
               optionLabelProp="label"
-              // bordered={false}
+              bordered={false}
             >
               <OptGroup label="フロント">
                 {frontTags.map((tag) => {

@@ -42,6 +42,7 @@ const ArticleAdd: React.FC<Props> = ({ user_info_data }) => {
 
   return (
     <div>
+      {/* FormタグとButtonタグが必要かも、 */}
       <Form.Item
         name="title"
         rules={[{ required: true, message: "タイトルが空欄です" }]}
