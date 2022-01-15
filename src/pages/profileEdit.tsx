@@ -1,20 +1,24 @@
-import Link from "next/link";
 import React from "react";
-import { ProfileLarge } from "../components/organisms";
+import { ProfileEdit } from "../components/organisms";
+import { LeftCircleOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 const profile: React.FC = () => {
   return (
     <div className="bg-gray-200 h-screen">
       <div className="flex justify-center">
         <div className="m-10 w-2/5 h-auto">
-          <ProfileLarge user_info_data={user_info_data} />
+          <Link href={"/profile"}>
+            <a className="text-gray-400 hover:text-slate-600">
+              <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
+            </a>
+          </Link>
+          <ProfileEdit user_info_data={user_info_data} />
           <div className="flex justify-between">
             <div></div>
-            <Link href={"/profileEdit"}>
-              <a className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] drop-shadow-2xl">
-                編集
-              </a>
-            </Link>
+            <button className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] drop-shadow-2xl">
+              保存
+            </button>
           </div>
         </div>
       </div>
@@ -42,7 +46,7 @@ export const user_info_data = {
   last_name: "山田",
   user_name: user_data.user_name,
   email: "yama@taro.com",
-  engineer_type: "",
+  engineer_type: "FR",
   comment: "趣味はサウナです。",
   skill_tags: skill_tags,
 };
