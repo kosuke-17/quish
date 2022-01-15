@@ -3,13 +3,15 @@ import { ProfileLarge } from "../components/organisms";
 
 const profile: React.FC = () => {
   return (
-    <div>
-      <div className="flex-none">プロフィールページ(削除用)</div>
-      {/* 下記以降必要 */}
-      <div className="bg-gray-200 h-screen">
-        <div className="flex justify-center">
-          <div className="text-center m-10 w-1/2 h-auto">
-            <ProfileLarge user_info_data={user_info_data} />
+    <div className="bg-gray-200 h-screen">
+      <div className="flex justify-center">
+        <div className="m-10 w-2/5 h-auto">
+          <ProfileLarge user_info_data={user_info_data} />
+          <div className="flex justify-between">
+            <div></div>
+            <button className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] drop-shadow-2xl">
+              編集
+            </button>
           </div>
         </div>
       </div>

@@ -36,27 +36,26 @@ const ProfileLarge: React.FC<Props> = ({ user_info_data }) => {
     "フロントエンド",
   ];
   return (
-    <div className="w-full p-2 m-2 bg-white rounded-lg border shadow-md">
+    <div className="w-full p-10 m-2 bg-white rounded-lg border shadow-md">
       <div className="m-4">
-        <div>ProfileLarge</div>
         <div className="flex justify-center items-center">
           {/* image(User) */}
           <Image
             className="rounded-full"
             src={"/img/avatar.jpg"}
             alt="アバター"
-            width={90}
-            height={90}
+            width={120}
+            height={120}
           />
           {/* userName(User) */}
-          <div className="pl-3 text-center">
-            <div>@{user_info_data.user_name}</div>
-            <div className="mt-2 p-1 rounded-full text-white bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)]">
+          <div className="pl-10 text-center">
+            <div className="text-xl">@{user_info_data.user_name}</div>
+            <div className="mt-2 p-2 rounded-full text-white bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)]">
               <button>フォロー</button>
             </div>
           </div>
         </div>
-        <div className="m-4 flex jusify-around divide-x divide-black ">
+        <div className="m-4 flex jusify-around divide-x divide-black text-lg">
           <div className="flex-grow text-center">
             {/*  */}
             投稿数
@@ -73,7 +72,7 @@ const ProfileLarge: React.FC<Props> = ({ user_info_data }) => {
             <div>140</div>
           </div>
         </div>
-        <div className="text-xl mt-2 flex justify-center items-center">
+        <div className="text-2xl mt-2 flex justify-center items-center">
           職種:
           <span className="ml-4 px-3 rounded-md text-white bg-[rgb(255,195,98)]">
             {/* engineerType(User) */}
@@ -94,7 +93,7 @@ const ProfileLarge: React.FC<Props> = ({ user_info_data }) => {
         </div>
       </div>
       {/* comment(User) */}
-      <div className="block m-2">{user_info_data.comment}</div>
+      <div className="text-xl text-center m-2">{user_info_data.comment}</div>
     </div>
   );
 };
