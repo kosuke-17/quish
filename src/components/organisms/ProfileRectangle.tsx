@@ -19,7 +19,7 @@ type Props = {
   };
 };
 
-const RectangleProfile: React.FC<Props> = ({ user_info_data }) => {
+const ProfileRectangle: React.FC<Props> = ({ user_info_data }) => {
   return (
     <div className="flex justify-rounded items-center w-full m-2 pl-10 p-2 bg-white rounded-lg border shadow-md">
       <Image
@@ -49,4 +49,4 @@ const RectangleProfile: React.FC<Props> = ({ user_info_data }) => {
   );
 };
 
-export default RectangleProfile;
+export default ProfileRectangle;

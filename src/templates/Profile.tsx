@@ -1,10 +1,10 @@
 import React from "react";
-import ProfileComp from "../components/organisms/ProfileComp";
+import { ProfileSmall } from "../components/organisms";
 
 const Profile: React.FC = () => {
   return (
     <div>
-      <ProfileComp user_info_data={user_info_data} />
+      <ProfileSmall user_info_data={user_info_data} />
     </div>
   );
 };

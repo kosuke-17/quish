@@ -9,7 +9,7 @@ type Props = {
     last_name: string;
     user_name: string;
     email: string;
-    enginner_type: string;
+    engineer_type: string;
     comment: string;
     skill_tags: {
       user_info_id: number;
@@ -19,7 +19,7 @@ type Props = {
   };
 };
 
-const ProfileComp: React.FC<Props> = ({ user_info_data }) => {
+const ProfileSmall: React.FC<Props> = ({ user_info_data }) => {
   const tagStyle =
     "mx-1 mb-1 p-1 bg-[rgb(255,195,98)] text-white text-center font-sans text-xs shadow-md rounded-lg";
   const tagsName = [
@@ -98,4 +98,4 @@ const ProfileComp: React.FC<Props> = ({ user_info_data }) => {
   );
 };
 
-export default ProfileComp;
+export default ProfileSmall;

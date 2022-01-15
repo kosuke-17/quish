@@ -1,6 +1,6 @@
 import React from "react";
 import { HeartOutlined, MessageTwoTone } from "@ant-design/icons";
-import { ProfileComp } from "../../components/organisms";
+import { ProfileSmall } from "../../components/organisms";
 import TextArea from "antd/lib/input/TextArea";
 import Image from "next/image";
 
@@ -78,7 +78,7 @@ const Article: React.FC = () => {
 
         <div className="w-1/5 mt-8">
           {/* profile(User) */}
-          <ProfileComp user_info_data={user_info_data} />
+          <ProfileSmall user_info_data={user_info_data} />
         </div>
       </div>
       <div className="flex justify-center">

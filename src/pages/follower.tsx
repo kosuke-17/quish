@@ -1,5 +1,5 @@
 import React from "react";
-import { RectangleProfile } from "../components/organisms";
+import { ProfileRectangle } from "../components/organisms";
 
 const Follow: React.FC = () => {
   return (
@@ -7,10 +7,10 @@ const Follow: React.FC = () => {
       <div className="text-3xl font-bold">フォロワーリスト一覧</div>
       <div className=" flex justify-center items-center ">
         <div className="w-1/3">
-          <RectangleProfile user_info_data={user_info_data} />
-          <RectangleProfile user_info_data={user_info_data} />
-          <RectangleProfile user_info_data={user_info_data} />
-          <RectangleProfile user_info_data={user_info_data} />
+          <ProfileRectangle user_info_data={user_info_data} />
+          <ProfileRectangle user_info_data={user_info_data} />
+          <ProfileRectangle user_info_data={user_info_data} />
+          <ProfileRectangle user_info_data={user_info_data} />
         </div>
       </div>
     </div>
