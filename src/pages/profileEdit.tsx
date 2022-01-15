@@ -3,7 +3,7 @@ import { ProfileEdit } from "../components/organisms";
 import { LeftCircleOutlined } from "@ant-design/icons";
 import Link from "next/link";
 
-const profile: React.FC = () => {
+const profileEdit: React.FC = () => {
   return (
     <div className="bg-gray-200 h-screen">
       <div className="flex justify-center">
@@ -26,7 +26,7 @@ const profile: React.FC = () => {
   );
 };
 
-export default profile;
+export default profileEdit;
 
 const user_data = {
   user_name: "rakus111111",
