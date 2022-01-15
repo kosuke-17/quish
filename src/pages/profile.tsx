@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { ProfileLarge } from "../components/organisms";
 
-const profile: React.FC = () => {
+const Profile: React.FC = () => {
   return (
     <div className="bg-gray-200 h-screen">
       <div className="flex justify-center">
@@ -22,7 +22,7 @@ const profile: React.FC = () => {
   );
 };
 
-export default profile;
+export default Profile;
 
 const user_data = {
   user_name: "rakus111111",

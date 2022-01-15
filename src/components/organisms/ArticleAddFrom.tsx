@@ -41,91 +41,88 @@ const ArticleAddFrom: React.FC<Props> = ({ user_info_data }) => {
   const engineer_types = ["FR", "WEB", "ML", "CL", "QA"];
 
   return (
-    <div>
-      {/* FormタグとButtonタグが必要かも、 */}
-      <Form>
-        <Form.Item
-          name="title"
-          rules={[{ required: true, message: "タイトルが空欄です" }]}
-        >
-          <span className="p-2">
-            <Input
-              className="placeholder-2xl focus:placeholder-gray-400"
-              placeholder="タイトル"
-              bordered={false}
-              size={"large"}
-            />
-          </span>
-        </Form.Item>
-        <Form.Item
-          name="tags"
-          rules={[{ required: true, message: "使用技術が空欄です" }]}
-        >
-          <Select
-            mode="multiple"
-            allowClear
-            placeholder="使用技術"
-            optionLabelProp="label"
+    <Form>
+      <Form.Item
+        name="title"
+        rules={[{ required: true, message: "タイトルが空欄です" }]}
+      >
+        <span className="p-2">
+          <Input
+            className="placeholder-2xl focus:placeholder-gray-400"
+            placeholder="タイトル"
             bordered={false}
+            size={"large"}
+          />
+        </span>
+      </Form.Item>
+      <Form.Item
+        name="tags"
+        rules={[{ required: true, message: "使用技術が空欄です" }]}
+      >
+        <Select
+          mode="multiple"
+          allowClear
+          placeholder="使用技術"
+          optionLabelProp="label"
+          bordered={false}
+        >
+          <OptGroup label="フロント">
+            {frontTags.map((tag) => {
+              return (
+                <Option key={tag} value={tag}>
+                  {tag}
+                </Option>
+              );
+            })}
+          </OptGroup>
+          <OptGroup label="バックエンド">
+            {backendTags.map((tag) => {
+              return (
+                <Option key={tag} value={tag}>
+                  {tag}
+                </Option>
+              );
+            })}
+          </OptGroup>
+          <OptGroup label="その他">
+            {otherTags.map((tag) => {
+              return (
+                <Option key={tag} value={tag}>
+                  {tag}
+                </Option>
+              );
+            })}
+          </OptGroup>
+        </Select>
+      </Form.Item>
+      <div className="w-full p-4 m-2 bg-white rounded-lg border shadow-md">
+        <div className="w-full p-2 rounded-xl hover:bg-gray-100">
+          <Form.Item
+            name="content"
+            rules={[{ required: true, message: "記事が空欄です" }]}
           >
-            <OptGroup label="フロント">
-              {frontTags.map((tag) => {
-                return (
-                  <Option key={tag} value={tag}>
-                    {tag}
-                  </Option>
-                );
-              })}
-            </OptGroup>
-            <OptGroup label="バックエンド">
-              {backendTags.map((tag) => {
-                return (
-                  <Option key={tag} value={tag}>
-                    {tag}
-                  </Option>
-                );
-              })}
-            </OptGroup>
-            <OptGroup label="その他">
-              {otherTags.map((tag) => {
-                return (
-                  <Option key={tag} value={tag}>
-                    {tag}
-                  </Option>
-                );
-              })}
-            </OptGroup>
-          </Select>
-        </Form.Item>
-        <div className="w-full p-4 m-2 bg-white rounded-lg border shadow-md">
-          <div className="w-full p-2 rounded-xl hover:bg-gray-100">
-            <Form.Item
-              name="content"
-              rules={[{ required: true, message: "記事が空欄です" }]}
-            >
-              <TextArea
-                placeholder="この読書の目的は「知ること」ではなく、「行動すること」"
-                autoSize={{ minRows: 5 }}
-                bordered={false}
-              />
-            </Form.Item>
-          </div>
+            <TextArea
+              placeholder="この読書の目的は「知ること」ではなく、「行動すること」"
+              autoSize={{ minRows: 5 }}
+              bordered={false}
+            />
+          </Form.Item>
         </div>
-        <Form.Item wrapperCol={{ offset: 19, span: 16 }}>
-          <Button
-            className="drop-shadow-2xl"
-            size="large"
-            shape="round"
-            htmlType="submit"
-          >
-            <span className="text-[rgb(255,195,98)] hover:border-[rgb(255,215,150)] hover:text-[rgb(255,207,131)]">
-              {" "}
-              保存
-            </span>
-          </Button>
-        </Form.Item>
-      </Form>
-    </div>
+      </div>
+      <Form.Item wrapperCol={{ offset: 19, span: 16 }}>
+        <Button
+          className="drop-shadow-2xl"
+          size="large"
+          shape="round"
+          htmlType="submit"
+        >
+          <span className="text-[rgb(255,195,98)] hover:border-[rgb(255,215,150)] hover:text-[rgb(255,207,131)]">
+            {" "}
+            保存
+          </span>
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
 
