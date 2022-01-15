@@ -1,6 +1,5 @@
-import Link from "next/link";
 import React from "react";
-import { TagsOutlined, HeartTwoTone, PictureFilled } from "@ant-design/icons";
+import { HeartOutlined, MessageTwoTone } from "@ant-design/icons";
 import { ProfileComp } from "../../components/organisms";
 import TextArea from "antd/lib/input/TextArea";
 import Image from "next/image";
@@ -8,54 +7,77 @@ import Image from "next/image";
 const Article: React.FC = () => {
   const commentContent =
     "こんにちは。まず僕もこの議論は影から見ていて、ほとんどはこの記事の主張と同じように思っています。多いのはelseを省略したifですが、多くの場合それは副作用を利用しているコードだと思います。記事でも言及があるようにifがもし式（= 三項演算子）であったら通用しにくくなるというのももっともだと思っています。その点を踏まえたうえで、ちょっとコメントです。キーワードのところに「参照透過」があるので、mayPrintのところは次のような参照透過が破壊される例があると、その次のIO<Void>を使った説明へと繋げやすくなる？🤔このような 👇コードにちょっと変更してみますinamiさんに言うまでもないことだとは思いますが、参照透過であるとは「あらゆる変数をその代入された式で置換してもプログラム全体の意味が同じになる」ということを意味していると思います参照透過であれば、こういう感じでprintの結果をいったん変数に代入しても同じとなるはずですが、これだとxの値が何であっても大抵のプログラム言語では正の数が出力されてしまうと思います。したがって元のプログラムは参照透過ではないということになりますそもそも参照透過であると何がいいんだ？というような議論にもなりそうですが、これを無理やり（？）参照透過にしたいというモチベーションでIO<Void>がある！という説明にできるような気がしました";
+  const tagStyle =
+    "m-1 py-1 px-1 bg-[rgb(255,195,98)] text-white text-center font-sans text-xs shadow-md rounded-lg";
+
+  const tagsName = [
+    "フロントエンド",
+    "CSS",
+    "tailwindCSS",
+    "初心者",
+    "フロントエンド",
+    "tailwindCSS",
+    "初心者",
+    "フロントエンド",
+    "CSS",
+    "tailwindCSS",
+    "初心者",
+    "フロントエンド",
+    "CSS",
+    "tailwindCSS",
+    "初心者",
+  ];
   return (
     <div className="bg-gray-200 h-screen">
       <div className="flex justify-center">
         <div className="text-center m-10 bg-white w-1/2 h-auto rounded-lg border shadow-md">
-          <div className="mt-8">
-            <Image
-              src={"/img/lang_logos/react.png"}
-              width={80}
-              height={80}
-              alt="言語画像"
-            />
-          </div>
-          <div className="py-2 text-2xl font-bold">
+          <div className="pb-10 pt-20 text-2xl font-bold">
+            {/* title(Article) */}
             TailwindCSSのチートシートを公開します。
           </div>
+          <div className="pb-2">
+            {/* likeCount(Article) */}
+            <div className="flex justify-center items-center">
+              <button>
+                <HeartOutlined className="text-2xl hover:text-[#FFB545]" />
+              </button>
+              <a
+                href="#"
+                className="ml-1 text-xl text-black hover:text-gray-400"
+              >
+                10
+              </a>{" "}
+              &nbsp;
+              {/* commentCount(Article) */}
+              <MessageTwoTone twoToneColor="#FFB545" className="text-2xl" />
+              <span className="ml-1 text-xl">1</span>
+            </div>
+          </div>
           <div className="px-10">
-            <TagsOutlined className="text-2xl" />
-            &nbsp;{" "}
-            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
-              {" "}
-              フロントエンド
-            </span>
-            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
-              CSS
-            </span>
-            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
-              tailwindCSS
-            </span>
-            <span className="m-1 py-1 px-1 bg-blue-500 text-white text-center font-sans text-xs shadow-md rounded-lg">
-              初心者
-            </span>
+            {/* tags(Article) */}
+            <div className="flex flex-wrap">
+              {tagsName.map((tagName) => {
+                return (
+                  <span className={tagStyle} key={tagName}>
+                    {tagName}
+                  </span>
+                );
+              })}
+            </div>
           </div>
-          <div className="text-slate-500 text-center">
+          <div className="pt-1 text-slate-500 text-center">
+            {/* posted_date(Article) */}
             <span>投稿日: 2021年12月7日</span>
-            &nbsp;
-            <span>更新日: 2021年12月7日</span>
           </div>
-
-          <div className="bg-gray-400 box-content h-40  p-8 text-center">
-            NoImage?
-          </div>
-          <p className="p-10 text-lg">
+          <p className="px-14 pt-6 text-lg">
+            {/* content(Article) */}
             {commentContent}{" "}
             プログラミングをしていると、「あれ、どうだったかな？」とリファレンスを確認する場面が結構出てきます。そんな時に、サクッと確認できるのが「チートシート」です。
           </p>
         </div>
 
         <div className="w-1/5 mt-8">
+          {/* profile(User) */}
           <ProfileComp user_info_data={user_info_data} />
         </div>
       </div>
@@ -65,23 +87,49 @@ const Article: React.FC = () => {
           <hr />
           <div className="ml-4 mb-3">
             <div className=" mt-4 flex">
-              <div className="w-10 h-10 rounded-full bg-slate-300"></div>
+              {/* <Link></Link>タグ */}
+              {/* image(User) */}
+              <Image
+                className="rounded-full"
+                src={"/img/avatar.jpg"}
+                alt="アバター"
+                width={30}
+                height={30}
+              />
               <div className="flex items-center pl-1">
-                @{user_info_data.user_name}
+                {/* userName(User) */}@{user_info_data.user_name}
               </div>
             </div>
+            {/* content(Comment) */}
             <div className="pl-2 py-3 pr-6 text-center">{commentContent}</div>
-            <div>
-              <HeartTwoTone twoToneColor="#FFB545" className="text-2xl" /> 10
+            <div className="flex items-center">
+              {/* likeList(Comment) */}
+              <button>
+                <HeartOutlined className="text-xl text-gray-300 hover:text-[#FFB545]" />
+              </button>
+              <a
+                href="#"
+                className="ml-1 text-md text-black hover:text-gray-400"
+              >
+                10
+              </a>
+              {/* posted_date(Comment) */}
               <span className="ml-6">2021-11-1 11:40</span>
             </div>
           </div>
           <hr />
           <div className="ml-4 mb-3">
             <div className=" mt-4 flex">
-              <div className="w-10 h-10 rounded-full bg-slate-300"></div>
+              {/* image(User) */}
+              <Image
+                className="rounded-full"
+                src={"/img/avatar.jpg"}
+                alt="アバター"
+                width={30}
+                height={30}
+              />
               <div className="flex items-center pl-1">
-                @{user_info_data.user_name}
+                {/* userName(User) */}@{user_info_data.user_name}
               </div>
             </div>
           </div>
@@ -94,8 +142,10 @@ const Article: React.FC = () => {
           </div>
           <hr />
           <div className="flex justify-between px-4 py-2">
-            <PictureFilled className="text-3xl" style={{ color: "#BCBCBC" }} />
-            <button className="p-1 rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] drop-shadow-2xl">
+            <div>
+              {/* <PictureFilled className="text-3xl" style={{ color: "#BCBCBC" }} /> */}
+            </div>
+            <button className="p-1 text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] drop-shadow-2xl">
               コメント
             </button>
           </div>
