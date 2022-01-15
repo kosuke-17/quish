@@ -1,5 +1,5 @@
+import Image from "next/image";
 import React from "react";
-import SkillTagsOnProfile from "../molecules/SkillTagsOnProfile";
 
 // FCの型定義
 type Props = {
@@ -21,35 +21,29 @@ type Props = {
 
 const RectangleProfile: React.FC<Props> = ({ user_info_data }) => {
   return (
-    <div className="flex w-full m-2 p-2 bg-white rounded-lg border shadow-md">
-      <div className="w-1/2 flex items-center">
-        <div className="w-20 h-20 rounded-full bg-slate-300"></div>
-        <div className="pl-3">@{user_info_data.user_name}</div>
+    <div className="flex justify-rounded items-center w-full m-2 pl-10 p-2 bg-white rounded-lg border shadow-md">
+      <Image
+        className="rounded-full"
+        src={"/img/avatar.jpg"}
+        alt="アバター"
+        width={90}
+        height={90}
+      />
+      <div className="w-2/5 flex items-center">
+        <div className="text-center ml-10">
+          <div>@{user_info_data.user_name}</div>
+          <div className="mt-2 text-lg">
+            職種<span className="mx-1">:</span>
+            <span className="px-3 rounded-md text-white bg-[rgb(255,195,98)]">
+              FR
+            </span>
+          </div>
+        </div>
       </div>
-      <div className="w-1/2">
-        <div className="mt-2 flex items-center justify-center">
-          職種:{" "}
-          <span className="ml-1 px-3 rounded-md text-white bg-orange-400">
-            FR
-          </span>{" "}
-        </div>
-        <div className="m-1 flex justify-center items-center divide-x divide-black text-xs text-center">
-          <div className="px-1">
-            投稿数
-            <br />
-            11
-          </div>
-          <div className="px-1">
-            フォロー
-            <br />
-            12
-          </div>
-          <div className="px-1">
-            フォロワー
-            <br />
-            14
-          </div>
-        </div>
+      <div className="mt-2 ml-4">
+        <span className="p-1 rounded-full text-xl text-white bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)]">
+          <button>フォロー</button>
+        </span>
       </div>
     </div>
   );
