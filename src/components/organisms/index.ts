@@ -1,4 +1,5 @@
 // ディレクトリ順
+export { default as ArticleAdd } from "./ArticleAdd";
 export { default as ArticleComp } from "./ArticleComp";
 export { default as HeaderComp } from "./HeaderComp";
 export { default as LoginUserComp } from "./LoginUserComp";
