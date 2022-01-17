@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Select, Form, Input, Button } from "antd";
 import TextArea from "antd/lib/input/TextArea";
+import ReactMarkdown from "react-markdown";
 
 const { Option, OptGroup } = Select;
 
@@ -21,9 +22,17 @@ type Props = {
       skill_name: string;
     }[];
   };
+  previewContent: string;
+  prevFlag: boolean;
+  onChange: Function;
 };
 
-const ArticleAddFrom: React.FC<Props> = ({ user_info_data }) => {
+const ArticleAddFrom: React.FC<Props> = ({
+  user_info_data,
+  previewContent,
+  prevFlag,
+  onChange,
+}) => {
   const tagStyle =
     "mx-1 mb-1 p-1 bg-[rgb(255,195,98)] text-white text-center font-sans text-xs shadow-md rounded-lg";
   // タグはまとめることも可能
@@ -96,18 +105,25 @@ const ArticleAddFrom: React.FC<Props> = ({ user_info_data }) => {
         </Select>
       </Form.Item>
       <div className="w-full p-4 m-2 bg-white rounded-lg border shadow-md">
-        <div className="w-full p-2 rounded-xl hover:bg-gray-100">
-          <Form.Item
-            name="content"
-            rules={[{ required: true, message: "記事が空欄です" }]}
-          >
-            <TextArea
-              placeholder="この読書の目的は「知ること」ではなく、「行動すること」"
-              autoSize={{ minRows: 5 }}
-              bordered={false}
-            />
-          </Form.Item>
-        </div>
+        {prevFlag ? (
+          <div className="w-full p-2 rounded-xl hover:bg-gray-100">
+            <Form.Item
+              name="content"
+              rules={[{ required: true, message: "記事が空欄です" }]}
+            >
+              <TextArea
+                placeholder="この読書の目的は「知ること」ではなく、「行動すること」"
+                autoSize={{ minRows: 5 }}
+                bordered={false}
+                onChange={(e) => onChange(e.target.value)}
+              />
+            </Form.Item>
+          </div>
+        ) : (
+          <div className="w-full p-2 rounded-xl bg-gray-100">
+            <ReactMarkdown>{previewContent}</ReactMarkdown>
+          </div>
+        )}
       </div>
       <Form.Item wrapperCol={{ offset: 19, span: 16 }}>
         <Button

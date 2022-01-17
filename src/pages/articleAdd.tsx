@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { ArticleAddFrom } from "../components/organisms";
 import { LeftCircleOutlined } from "@ant-design/icons";
 import Link from "next/link";
 
 const ArticleAdd: React.FC = () => {
+  const [contnent, setContent] = useState("");
+  const [previewFlag, setPreviewFlag] = useState(true);
   return (
-    <div className="bg-gray-200 h-screen">
-      <div className="flex justify-center">
-        <div className="m-10 w-2/5 h-auto">
-          <Link href={"/"}>
-            <a className="text-gray-400 hover:text-slate-600">
-              <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
-            </a>
-          </Link>
-          <ArticleAddFrom user_info_data={user_info_data} />
+    <div>
+      <div className="bg-gray-200 h-screen">
+        <div className="flex justify-center">
+          <div className="m-10 w-2/5 h-auto">
+            <Link href={"/"}>
+              <a className="text-gray-400 hover:text-slate-600">
+                <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
+              </a>
+            </Link>
+
+            <ArticleAddFrom
+              user_info_data={user_info_data}
+              previewContent={contnent}
+              prevFlag={previewFlag}
+              onChange={setContent}
+            />
+          </div>
+          <button onClick={() => setPreviewFlag(!previewFlag)}>preview</button>
         </div>
       </div>
     </div>
