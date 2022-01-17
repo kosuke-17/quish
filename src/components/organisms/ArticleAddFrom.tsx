@@ -121,7 +121,9 @@ const ArticleAddFrom: React.FC<Props> = ({
           </div>
         ) : (
           <div className="w-full p-2 rounded-xl bg-gray-100">
-            <ReactMarkdown>{previewContent}</ReactMarkdown>
+            <div className="markdown">
+              <ReactMarkdown>{previewContent}</ReactMarkdown>
+            </div>
           </div>
         )}
       </div>
