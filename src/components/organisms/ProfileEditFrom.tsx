@@ -28,16 +28,55 @@ const ProfileEditFrom: React.FC<Props> = ({ user_info_data }) => {
     "mx-1 mb-1 p-1 bg-[rgb(255,195,98)] text-white text-center font-sans text-xs shadow-md rounded-lg";
   // タグはまとめることも可能
   const frontTags = [
-    "HTML5",
-    "CSS3",
+    "HTML",
+    "CSS",
     "JavaScript",
-    "TypeScript",
+    "jQuery",
     "React",
     "Angular",
     "Vue",
+    "TypeScript",
+    "CoffeeScript",
+    "Node.js",
   ];
-  const backendTags = ["Java", "Ruby", "PHP", "Phyton"];
-  const otherTags = ["Nodejs", "docker", "flutter"];
+  const backendTags = [
+    "C",
+    "C+",
+    "C#",
+    "Java",
+    "Ruby",
+    "PHP",
+    "Phyton",
+    "Objective-C",
+    "Perl",
+  ];
+  const otherTags = [
+    "Swift",
+    "kotolin",
+    "Bootstrap",
+    "JUnit",
+    "MySQL",
+    "PostgreSQL",
+    "Oracle",
+    "SQLite",
+    "MongoDB",
+    "SQL",
+    "Git",
+    "GitHub",
+    "GitLab",
+    "Docker",
+    "AWS",
+    "Heroku",
+    "Linux",
+    "Bash",
+    "CentOS",
+    "Redmine",
+    "shell",
+    "Redmine",
+    "Postman",
+    "Atom",
+    "ssh",
+  ];
   const engineer_types = ["FR", "WEB", "ML", "CL", "QA"];
 
   return (
