@@ -3,6 +3,7 @@
 export { default as ArticleList } from "./ArticleList";
 export { default as LoginUser } from "./LoginUser";
 export { default as Profile } from "./Profile";
+export { default as ProfileSmall } from "./ProfileSmall";
 export { default as ProfileEdit } from "./ProfileEdit";
 export { default as Header } from "./Header";
 export { default as RegisterUser } from "./RegisterUser";
