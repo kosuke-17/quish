@@ -1,12 +1,10 @@
 import React from "react";
 import { HeartOutlined, MessageTwoTone } from "@ant-design/icons";
-import { ProfileSmall } from "../../components/old_organisms";
+import { ProfileSmall } from "../../components/organisms";
 import TextArea from "antd/lib/input/TextArea";
 import Image from "next/image";
 
 const Article: React.FC = () => {
-  const commentContent =
-    "こんにちは。まず僕もこの議論は影から見ていて、ほとんどはこの記事の主張と同じように思っています。多いのはelseを省略したifですが、多くの場合それは副作用を利用しているコードだと思います。記事でも言及があるようにifがもし式（= 三項演算子）であったら通用しにくくなるというのももっともだと思っています。その点を踏まえたうえで、ちょっとコメントです。キーワードのところに「参照透過」があるので、mayPrintのところは次のような参照透過が破壊される例があると、その次のIO<Void>を使った説明へと繋げやすくなる？🤔このような 👇コードにちょっと変更してみますinamiさんに言うまでもないことだとは思いますが、参照透過であるとは「あらゆる変数をその代入された式で置換してもプログラム全体の意味が同じになる」ということを意味していると思います参照透過であれば、こういう感じでprintの結果をいったん変数に代入しても同じとなるはずですが、これだとxの値が何であっても大抵のプログラム言語では正の数が出力されてしまうと思います。したがって元のプログラムは参照透過ではないということになりますそもそも参照透過であると何がいいんだ？というような議論にもなりそうですが、これを無理やり（？）参照透過にしたいというモチベーションでIO<Void>がある！という説明にできるような気がしました";
   const tagStyle =
     "m-1 py-1 px-1 bg-orange-500 text-white text-center font-sans text-xs shadow-md rounded-lg";
 
@@ -71,7 +69,6 @@ const Article: React.FC = () => {
           </div>
           <p className="px-14 pt-6 text-lg">
             {/* content(Article) */}
-            {commentContent}
             プログラミングをしていると、「あれ、どうだったかな？」とリファレンスを確認する場面が結構出てきます。そんな時に、サクッと確認できるのが「チートシート」です。
           </p>
         </div>
@@ -101,7 +98,9 @@ const Article: React.FC = () => {
               </div>
             </div>
             {/* content(Comment) */}
-            <div className="pl-2 py-3 pr-6 text-center">{commentContent}</div>
+            <div className="pl-2 py-3 pr-6 text-center">
+              プログラミングをしていると、「あれ、どうだったかな？」とリファレンスを確認する場面が結構出てきます。そんな時に、サクッと確認できるのが「チートシート」です。
+            </div>
             <div className="flex items-center">
               {/* likeList(Comment) */}
               <button>
