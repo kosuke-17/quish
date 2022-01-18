@@ -37,7 +37,7 @@ const ArticleComp: React.FC<Props> = ({ articleData }) => {
         </div>
 
         <Link href={`/articles/${articleData.id}`}>
-          <a className="text-black text-base font-bold no-underline hover:underline">
+          <a className="text-black hover:text-gray-400 text-base font-bold no-underline hover:underline">
             {articleData.title}
           </a>
         </Link>
