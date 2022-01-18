@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import SkillTagsOnArticle from "../molecules/SkillTagsOnArticle";
+import SkillTagsOnArticle from "../old_molecules/SkillTagsOnArticle";
 
 // FCの型定義
 type Props = {

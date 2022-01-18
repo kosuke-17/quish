@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArticleAddFrom } from "../components/organisms";
+import { ArticleAddFrom } from "../components/old_organisms";
 import { LeftCircleOutlined } from "@ant-design/icons";
 import Link from "next/link";
 

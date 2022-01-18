@@ -1,5 +1,5 @@
 import React from "react";
-import { ProfileRectangle } from "../components/organisms";
+import { ProfileRectangle } from "../components/old_organisms";
 
 const Follow: React.FC = () => {
   return (

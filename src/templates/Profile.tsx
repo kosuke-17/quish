@@ -1,5 +1,5 @@
 import React from "react";
-import { ProfileSmall } from "../components/organisms";
+import { ProfileSmall } from "../components/old_organisms";
 
 const Profile: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { ProfileLarge } from "../components/organisms";
+import { ProfileLarge } from "../components/old_organisms";
 
 const Profile: React.FC = () => {
   return (

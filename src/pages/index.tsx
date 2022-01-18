@@ -1,5 +1,5 @@
 import Router from "next/router";
-import { ArticleComp } from "../components/organisms";
+import { ArticleComp } from "../components/old_organisms";
 import { Header, ArticleList } from "../templates";
 
 const goToProfile = () => {

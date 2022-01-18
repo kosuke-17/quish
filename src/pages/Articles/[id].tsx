@@ -1,6 +1,6 @@
 import React from "react";
 import { HeartOutlined, MessageTwoTone } from "@ant-design/icons";
-import { ProfileSmall } from "../../components/organisms";
+import { ProfileSmall } from "../../components/old_organisms";
 import TextArea from "antd/lib/input/TextArea";
 import Image from "next/image";
 
