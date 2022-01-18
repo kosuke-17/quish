@@ -1,5 +1,4 @@
 import Router from "next/router";
-import { ArticleComp } from "../components/old_organisms";
 import { Header, ArticleList } from "../templates";
 
 const goToProfile = () => {
@@ -17,7 +16,7 @@ const goToLogin = () => {
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-orange-100 h-screen">
+    <div className="">
       <button onClick={goToProfile}>プロフィールへ</button>
       <button onClick={goToRegisterUser}>会員登録</button>
       <button onClick={goToLogin}>ログイン</button>
@@ -28,6 +27,14 @@ const Home: React.FC = () => {
         Articles
       </div>
       <div>
+        <ArticleList />
+        <ArticleList />
+        <ArticleList />
+        <ArticleList />
+        <ArticleList />
+        <ArticleList />
+        <ArticleList />
+        <ArticleList />
         <ArticleList />
       </div>
     </div>

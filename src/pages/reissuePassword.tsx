@@ -1,8 +1,6 @@
-import Router from "next/router";
-
 const registerUser: React.FC = () => {
   return (
-    <div className="bg-orange-100 h-screen w-screen flex flex-col gap-2 justify-center items-center">
+    <div className="h-screen w-screen flex flex-col gap-2 justify-center items-center">
       <input
         type="text"
         placeholder="E-mail（rakusのメールアドレス)

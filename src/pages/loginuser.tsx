@@ -6,7 +6,7 @@ const goToReissue = () => {
 
 const registerUser: React.FC = () => {
   return (
-    <div className="bg-orange-100 h-screen w-screen flex flex-col gap-2 justify-center items-center">
+    <div className="h-screen w-screen flex flex-col gap-2 justify-center items-center">
       <div className="mr-56 text-4xl font-semibold text-orange-500">Login</div>
       <input
         type="text"

@@ -5,16 +5,14 @@ import Link from "next/link";
 
 const ProfileEdit: React.FC = () => {
   return (
-    <div className="bg-gray-200 h-screen">
-      <div className="flex justify-center">
-        <div className="m-10 w-2/5 h-auto">
-          <Link href={"/profile"}>
-            <a className="text-gray-400 hover:text-slate-600">
-              <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
-            </a>
-          </Link>
-          <ProfileEditFrom user_info_data={user_info_data} />
-        </div>
+    <div className="flex justify-center">
+      <div className="m-10 w-2/5 h-auto">
+        <Link href={"/profile"}>
+          <a className="text-gray-400 hover:text-slate-600">
+            <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
+          </a>
+        </Link>
+        <ProfileEditFrom user_info_data={user_info_data} />
       </div>
     </div>
   );

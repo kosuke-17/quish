@@ -3,9 +3,9 @@ import { ProfileRectangle } from "../components/old_organisms";
 
 const Follow: React.FC = () => {
   return (
-    <div className="p-3 h-screen bg-gray-200 text-center">
+    <div className="p-3 text-center">
       <div className="text-3xl font-bold">フォローリスト一覧</div>
-      <div className=" flex justify-center items-center ">
+      <div className="flex justify-center items-center ">
         <div className="w-1/3">
           <ProfileRectangle user_info_data={user_info_data} />
           <ProfileRectangle user_info_data={user_info_data} />

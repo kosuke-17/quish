@@ -4,18 +4,16 @@ import { ProfileLarge } from "../components/old_organisms";
 
 const Profile: React.FC = () => {
   return (
-    <div className="bg-gray-200 h-screen">
-      <div className="flex justify-center">
-        <div className="m-10 w-2/5 h-auto">
-          <ProfileLarge user_info_data={user_info_data} />
-          <div className="flex justify-between">
-            <div></div>
-            <Link href={"/profileEdit"}>
-              <a className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] hover:text-white drop-shadow-2xl">
-                編集
-              </a>
-            </Link>
-          </div>
+    <div className="flex justify-center">
+      <div className="m-10 w-2/5 h-auto">
+        <ProfileLarge user_info_data={user_info_data} />
+        <div className="flex justify-between">
+          <div></div>
+          <Link href={"/profileEdit"}>
+            <a className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] hover:text-white drop-shadow-2xl">
+              編集
+            </a>
+          </Link>
         </div>
       </div>
     </div>

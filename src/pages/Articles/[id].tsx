@@ -28,7 +28,7 @@ const Article: React.FC = () => {
     "初心者",
   ];
   return (
-    <div className="bg-gray-200 h-screen">
+    <div className="h-full">
       <div className="flex justify-center">
         <div className="text-center m-10 bg-white w-1/2 h-auto rounded-lg border shadow-md">
           <div className="pb-10 pt-20 text-2xl font-bold">

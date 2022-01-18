@@ -8,24 +8,22 @@ const ArticleAdd: React.FC = () => {
   const [previewFlag, setPreviewFlag] = useState(true);
   return (
     <div>
-      <div className="bg-gray-200 h-screen">
-        <div className="flex justify-center">
-          <div className="m-10 w-2/5 h-auto">
-            <Link href={"/"}>
-              <a className="text-gray-400 hover:text-slate-600">
-                <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
-              </a>
-            </Link>
+      <div className="flex justify-center">
+        <div className="m-10 w-2/5 h-auto">
+          <Link href={"/"}>
+            <a className="text-gray-400 hover:text-slate-600">
+              <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
+            </a>
+          </Link>
 
-            <ArticleAddFrom
-              user_info_data={user_info_data}
-              previewContent={contnent}
-              prevFlag={previewFlag}
-              onChange={setContent}
-            />
-          </div>
-          <button onClick={() => setPreviewFlag(!previewFlag)}>preview</button>
+          <ArticleAddFrom
+            user_info_data={user_info_data}
+            previewContent={contnent}
+            prevFlag={previewFlag}
+            onChange={setContent}
+          />
         </div>
+        <button onClick={() => setPreviewFlag(!previewFlag)}>preview</button>
       </div>
     </div>
   );
