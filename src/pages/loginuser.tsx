@@ -4,7 +4,7 @@ const goToReissue = () => {
   Router.push("/reissuePassword");
 };
 
-const registerUser: React.FC = () => {
+const loginUser: React.FC = () => {
   return (
     <div className="bg-orange-100 h-screen w-screen flex flex-col gap-2 justify-center items-center">
       <div className="mr-56 text-4xl font-semibold text-orange-500">Login</div>
@@ -31,4 +31,4 @@ const registerUser: React.FC = () => {
   );
 };
 
-export default registerUser;
+export default loginUser;
