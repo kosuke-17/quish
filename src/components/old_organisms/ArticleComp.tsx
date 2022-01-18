@@ -36,7 +36,7 @@ const ArticleComp: React.FC<Props> = ({ articleData }) => {
           に投稿しました
         </div>
 
-        <Link href={`/Articles/${articleData.id}`}>
+        <Link href={`/articles/${articleData.id}`}>
           <a className="text-black text-base font-bold no-underline hover:underline">
             {articleData.title}
           </a>
