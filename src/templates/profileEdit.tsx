@@ -1,19 +1,25 @@
 import React from "react";
-import { ProfileSmall } from "../components/organisms";
+import { ProfileEditFrom } from "../components/organisms";
+import { LeftCircleOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
-const Profile: React.FC = () => {
+const ProfileEdit: React.FC = () => {
   return (
-    <div>
-      <ProfileSmall user_info_data={user_info_data} />
+    <div className="flex justify-center">
+      <div className="m-10 w-2/5 h-auto">
+        <Link href={"/profile"}>
+          <a className="text-gray-400 hover:text-slate-600">
+            <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
+          </a>
+        </Link>
+        <ProfileEditFrom user_info_data={user_info_data} />
+      </div>
     </div>
   );
 };
 
-export default Profile;
+export default ProfileEdit;
 
-// APIでデータが取ってこれれば不要
-// ------------------------------------------
-// デモユーザー
 const user_data = {
   user_name: "rakus111111",
   password: "Yamtataro123",
@@ -32,7 +38,7 @@ export const user_info_data = {
   last_name: "山田",
   user_name: user_data.user_name,
   email: "yama@taro.com",
-  engineer_type: "",
+  engineer_type: "FR",
   comment: "趣味はサウナです。",
   skill_tags: skill_tags,
 };
