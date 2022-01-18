@@ -12,7 +12,7 @@ const goToRegisterUser = () => {
   Router.push("/registerUser");
 };
 const goToLogin = () => {
-  Router.push("/profile");
+  Router.push("/loginuser");
 };
 
 const Home: React.FC = () => {
