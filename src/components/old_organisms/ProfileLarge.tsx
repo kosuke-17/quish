@@ -21,7 +21,7 @@ type Props = {
 
 const ProfileLarge: React.FC<Props> = ({ user_info_data }) => {
   const tagStyle =
-    "mx-1 mb-1 p-1 bg-[rgb(255,195,98)] text-white text-center font-sans text-xs shadow-md rounded-lg";
+    "mx-1 mb-1 p-1 bg-orange-500 text-white text-center font-sans text-xs shadow-md rounded-lg";
   const tagsName = [
     "フロントエンド",
     "CSS",
@@ -29,7 +29,6 @@ const ProfileLarge: React.FC<Props> = ({ user_info_data }) => {
     "tailwindCSS",
     "初心者",
     "フロントエンド",
-    ,
     "初心者",
     "tailwindCSS",
     "初心者",
@@ -50,7 +49,7 @@ const ProfileLarge: React.FC<Props> = ({ user_info_data }) => {
           {/* userName(User) */}
           <div className="pl-10 text-center">
             <div className="text-xl">@{user_info_data.user_name}</div>
-            <div className="mt-2 p-2 rounded-full text-white bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)]">
+            <div className="mt-2 p-2 rounded-full text-white bg-orange-500 hover:bg-orange-300">
               <button>フォロー</button>
             </div>
           </div>
@@ -74,7 +73,7 @@ const ProfileLarge: React.FC<Props> = ({ user_info_data }) => {
         </div>
         <div className="text-2xl mt-2 flex justify-center items-center">
           職種:
-          <span className="ml-4 px-3 rounded-md text-white bg-[rgb(255,195,98)]">
+          <span className="ml-4 px-3 rounded-md text-white bg-orange-500">
             {/* engineerType(User) */}
             FR
           </span>

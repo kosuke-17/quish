@@ -195,10 +195,7 @@ const ProfileEditFrom: React.FC<Props> = ({ user_info_data }) => {
           shape="round"
           htmlType="submit"
         >
-          <span className="text-[rgb(255,195,98)] hover:border-[rgb(255,215,150)] hover:text-[rgb(255,207,131)]">
-            {" "}
-            保存
-          </span>
+          <span className="text-orange-500 hover:text-orange-300">保存</span>
         </Button>
       </Form.Item>
     </Form>

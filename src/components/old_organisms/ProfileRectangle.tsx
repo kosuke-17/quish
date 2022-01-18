@@ -34,14 +34,12 @@ const ProfileRectangle: React.FC<Props> = ({ user_info_data }) => {
           <div>@{user_info_data.user_name}</div>
           <div className="mt-2 text-lg">
             職種<span className="mx-1">:</span>
-            <span className="px-3 rounded-md text-white bg-[rgb(255,195,98)]">
-              FR
-            </span>
+            <span className="px-3 rounded-md text-white bg-orange-500">FR</span>
           </div>
         </div>
       </div>
       <div className="mt-2 ml-4">
-        <span className="p-1 rounded-full text-xl text-white bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)]">
+        <span className="p-1 rounded-full text-xl text-white bg-orange-500 hover:bg-orange-300">
           <button>フォロー</button>
         </span>
       </div>

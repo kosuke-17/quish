@@ -21,7 +21,7 @@ type Props = {
 
 const ProfileSmall: React.FC<Props> = ({ user_info_data }) => {
   const tagStyle =
-    "mx-1 mb-1 p-1 bg-[rgb(255,195,98)] text-white text-center font-sans text-xs shadow-md rounded-lg";
+    "mx-1 mb-1 p-1 bg-orange-500  text-white text-center font-sans text-xs shadow-md rounded-lg";
   const tagsName = ["フロントエンド", "CSS", "tailwindCSS", "初心者"];
   return (
     <div className="w-full p-2 m-2 bg-white rounded-lg border shadow-md">
@@ -38,7 +38,7 @@ const ProfileSmall: React.FC<Props> = ({ user_info_data }) => {
           {/* userName(User) */}
           <div className="pl-3 text-center">
             <div>@{user_info_data.user_name}</div>
-            <div className="mt-2 p-1 rounded-full text-white bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)]">
+            <div className="mt-2 p-1 rounded-full text-white bg-orange-500 hover:bg-orange-300">
               <button>フォロー</button>
             </div>
           </div>
@@ -62,7 +62,7 @@ const ProfileSmall: React.FC<Props> = ({ user_info_data }) => {
         </div>
         <div className="text-xl mt-2 flex justify-center items-center">
           職種:
-          <span className="ml-4 px-3 rounded-md text-white bg-[rgb(255,195,98)]">
+          <span className="ml-4 px-3 rounded-md text-white bg-orange-500 ">
             {/* engineerType(User) */}
             FR
           </span>

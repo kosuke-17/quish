@@ -8,7 +8,7 @@ const Article: React.FC = () => {
   const commentContent =
     "こんにちは。まず僕もこの議論は影から見ていて、ほとんどはこの記事の主張と同じように思っています。多いのはelseを省略したifですが、多くの場合それは副作用を利用しているコードだと思います。記事でも言及があるようにifがもし式（= 三項演算子）であったら通用しにくくなるというのももっともだと思っています。その点を踏まえたうえで、ちょっとコメントです。キーワードのところに「参照透過」があるので、mayPrintのところは次のような参照透過が破壊される例があると、その次のIO<Void>を使った説明へと繋げやすくなる？🤔このような 👇コードにちょっと変更してみますinamiさんに言うまでもないことだとは思いますが、参照透過であるとは「あらゆる変数をその代入された式で置換してもプログラム全体の意味が同じになる」ということを意味していると思います参照透過であれば、こういう感じでprintの結果をいったん変数に代入しても同じとなるはずですが、これだとxの値が何であっても大抵のプログラム言語では正の数が出力されてしまうと思います。したがって元のプログラムは参照透過ではないということになりますそもそも参照透過であると何がいいんだ？というような議論にもなりそうですが、これを無理やり（？）参照透過にしたいというモチベーションでIO<Void>がある！という説明にできるような気がしました";
   const tagStyle =
-    "m-1 py-1 px-1 bg-[rgb(255,195,98)] text-white text-center font-sans text-xs shadow-md rounded-lg";
+    "m-1 py-1 px-1 bg-orange-500 text-white text-center font-sans text-xs shadow-md rounded-lg";
 
   const tagsName = [
     "フロントエンド",
@@ -39,7 +39,7 @@ const Article: React.FC = () => {
             {/* likeCount(Article) */}
             <div className="flex justify-center items-center">
               <button>
-                <HeartOutlined className="text-2xl hover:text-[#FFB545]" />
+                <HeartOutlined className="text-2xl hover:text-orange-500" />
               </button>
               <a
                 href="#"
@@ -49,7 +49,7 @@ const Article: React.FC = () => {
               </a>{" "}
               &nbsp;
               {/* commentCount(Article) */}
-              <MessageTwoTone twoToneColor="#FFB545" className="text-2xl" />
+              <MessageTwoTone twoToneColor="#f97316" className="text-2xl" />
               <span className="ml-1 text-xl">1</span>
             </div>
           </div>
@@ -71,7 +71,7 @@ const Article: React.FC = () => {
           </div>
           <p className="px-14 pt-6 text-lg">
             {/* content(Article) */}
-            {commentContent}{" "}
+            {commentContent}
             プログラミングをしていると、「あれ、どうだったかな？」とリファレンスを確認する場面が結構出てきます。そんな時に、サクッと確認できるのが「チートシート」です。
           </p>
         </div>
@@ -105,7 +105,7 @@ const Article: React.FC = () => {
             <div className="flex items-center">
               {/* likeList(Comment) */}
               <button>
-                <HeartOutlined className="text-xl text-gray-300 hover:text-[#FFB545]" />
+                <HeartOutlined className="text-xl text-gray-300 hover:text-orange-500" />
               </button>
               <a
                 href="#"
@@ -145,7 +145,7 @@ const Article: React.FC = () => {
             <div>
               {/* <PictureFilled className="text-3xl" style={{ color: "#BCBCBC" }} /> */}
             </div>
-            <button className="p-1 text-white rounded-lg bg-[rgb(255,195,98)] hover:bg-[rgb(255,207,131)] drop-shadow-2xl">
+            <button className="p-1 text-white rounded-lg bg-orange-500 hover:bg-orange-500 drop-shadow-2xl">
               コメント
             </button>
           </div>
