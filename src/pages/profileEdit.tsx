@@ -1,5 +1,5 @@
 import React from "react";
-import { ProfileEditFrom } from "../components/old_organisms";
+import { ProfileEditFrom } from "../components/organisms";
 import { LeftCircleOutlined } from "@ant-design/icons";
 import Link from "next/link";
 

@@ -1,11 +1,17 @@
 import Link from "next/link";
 import React from "react";
-import { ProfileLarge } from "../components/old_organisms";
+import { LeftCircleOutlined } from "@ant-design/icons";
+import { ProfileLarge } from "../components/organisms";
 
 const Profile: React.FC = () => {
   return (
     <div className="flex justify-center">
       <div className="m-10 w-2/5 h-auto">
+        <Link href={"/"}>
+          <a className="text-gray-400 hover:text-slate-600">
+            <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
+          </a>
+        </Link>
         <ProfileLarge user_info_data={user_info_data} />
         <div className="flex justify-between">
           <div></div>

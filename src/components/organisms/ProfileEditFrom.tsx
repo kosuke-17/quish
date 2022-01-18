@@ -24,8 +24,6 @@ type Props = {
 };
 
 const ProfileEditFrom: React.FC<Props> = ({ user_info_data }) => {
-  const tagStyle =
-    "mx-1 mb-1 p-1 bg-[rgb(255,195,98)] text-white text-center font-sans text-xs shadow-md rounded-lg";
   // タグはまとめることも可能
   const frontTags = [
     "HTML",
