@@ -4,9 +4,6 @@ import { Header, ArticleList } from "../templates";
 const goToProfile = () => {
   Router.push("/profile");
 };
-const addArticle = () => {
-  Router.push("/articleAdd");
-};
 const goToRegisterUser = () => {
   Router.push("/registerUser");
 };
