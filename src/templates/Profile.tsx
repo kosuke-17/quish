@@ -1,31 +1,41 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { LeftCircleOutlined } from "@ant-design/icons";
 import { ProfileLarge } from "../components/organisms";
 import useSWR from "swr";
+import { ProfileEdit } from "./";
 
 const Profile: React.FC = () => {
+  const [editFlag, setEditFlag] = useState(true);
   // ユーザーのプロフィールデータ
   const { data } = useSWR("/profile");
   console.log(data);
 
+  const changeEditFlag = () => setEditFlag(!editFlag);
+
   return (
-    <div className="flex justify-center">
-      <div className="m-10 w-2/5 h-auto">
-        <Link href={"/"}>
-          <a className="text-gray-400 hover:text-slate-600">
-            <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
-          </a>
-        </Link>
-        <ProfileLarge user_info_data={user_info_data} />
-        <div className="flex justify-end">
-          <Link href={"/profileEdit"}>
-            <a className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-orange-500 hover:bg-orange-300 hover:text-white drop-shadow-2xl">
-              編集
-            </a>
-          </Link>
+    <div>
+      {editFlag ? (
+        <div className="flex justify-center">
+          <div className="m-10 w-2/5 h-auto">
+            <Link href={"/"}>
+              <a className="text-gray-400 hover:text-slate-600">
+                <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
+              </a>
+            </Link>
+            <ProfileLarge user_info_data={user_info_data} />
+            <div className="flex justify-end">
+              <span className="mt-2 mr-2 p-2 text-2xl text-white rounded-lg bg-orange-500 hover:bg-orange-300 hover:text-white drop-shadow-2xl">
+                <button type="button" onClick={changeEditFlag}>
+                  編集
+                </button>
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
+      ) : (
+        <ProfileEdit changeEditFlag={changeEditFlag} />
+      )}
     </div>
   );
 };

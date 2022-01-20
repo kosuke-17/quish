@@ -1,17 +1,18 @@
 import React from "react";
 import { ProfileEditFrom } from "../components/organisms";
 import { LeftCircleOutlined } from "@ant-design/icons";
-import Link from "next/link";
 
-const ProfileEdit: React.FC = () => {
+type Props = {
+  changeEditFlag: Function;
+};
+
+const ProfileEdit: React.FC<Props> = ({ changeEditFlag }) => {
   return (
     <div className="flex justify-center">
       <div className="m-10 w-2/5 h-auto">
-        <Link href={"/profile"}>
-          <a className="text-gray-400 hover:text-slate-600">
-            <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
-          </a>
-        </Link>
+        <button type="button" onClick={() => changeEditFlag()}>
+          <LeftCircleOutlined className="ml-4 mb-2 text-4xl" />
+        </button>
         <ProfileEditFrom user_info_data={user_info_data} />
       </div>
     </div>
