@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LeftCircleOutlined } from "@ant-design/icons";
 import { ProfileLarge } from "../components/organisms";
 import useSWR from "swr";
@@ -9,7 +9,9 @@ const Profile: React.FC = () => {
   const [editFlag, setEditFlag] = useState(true);
   // ユーザーのプロフィールデータ
   const { data } = useSWR("/profile");
-  console.log(data);
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   const changeEditFlag = () => setEditFlag(!editFlag);
 
